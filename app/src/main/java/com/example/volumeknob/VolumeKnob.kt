@@ -53,8 +53,8 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?) : View(context, attrs)
 
 
 
-        var hb = h/2f/1.7f
-        var wb = w/2f/1.7f
+        var hb = h/2f/2.1f
+        var wb = w/2f/2.1f
 
         if(wb < hb){
             radius = wb / 5f
@@ -66,6 +66,7 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?) : View(context, attrs)
         paint.style = Paint.Style.FILL
         paint.color = Color.parseColor("#00ff00")
         canvas.drawCircle(wb , hb , radius, paint2)
+
         super.onDraw(canvas)
         //paint.color = Color.WHITE
        // canvas.drawPaint(paint)

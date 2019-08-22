@@ -2,6 +2,7 @@ package com.example.volumeknob
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 ///we're gonna make two circles in a customView that will be a superset of Relative Layout
 //use sample code to rotate the indicator around the plate
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+btn.setOnClickListener {
+    vk.rotation += 20f
+}
 
 
 
