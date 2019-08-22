@@ -8,17 +8,15 @@ import android.os.Bundle
 
 //.1. going to try to create the CustomView VolumeKnob as a superset of RelativeLayout consisting of 2 drawn circles
 
+//.2. oh wow how the time has flown. We have one circle succesfully displaying and a better idea of how to use canvas and drawing to it, w
+//relativeLAyout was replaced with view while we debuged. work continues
 class MainActivity : AppCompatActivity() {
-    private lateinit var customDrawable: CustomDrawable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-
-
-        customDrawable = CustomDrawable(this)
-        setContentView(customDrawable)
 
 
 
