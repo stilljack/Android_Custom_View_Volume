@@ -14,6 +14,7 @@ import android.view.View
 class VolumeKnob(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     private val paint = Paint()
+    private val paint2 = Paint()
 //constructor(context: Context): this(context, null)
     //
     // POSSIBLE ALTERNATE FOR VOLUMEKNOB(context: Context, attrs: AttributeSet, defStyleAttr : Int, defStyleRes: Int)
@@ -33,9 +34,9 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?) : View(context, attrs)
     override fun onDraw(canvas: Canvas) {
 
        var h= this.height
-        var i = this.width
-        var a = h/ 2f
-        var b = i / 2f
+        var w = this.width
+        var ha = h/2f
+        var wa = w/2f
         var radius:Float
         if(width < height){
            radius = width / 2f
@@ -43,18 +44,38 @@ class VolumeKnob(context: Context?, attrs: AttributeSet?) : View(context, attrs)
         else{
          radius = height / 2f
             }
-        radius -= radius/10f
+       // radius -= radius/10f
         paint.style = Paint.Style.FILL
+        paint.color = Color.parseColor("#ffffff")
+        canvas.drawCircle(wa , ha , radius, paint)
+        super.onDraw(canvas)
+
+
+
+
+        var hb = h/2f/1.7f
+        var wb = w/2f/1.7f
+
+        if(wb < hb){
+            radius = wb / 5f
+        }
+        else{
+            radius = hb / 5f
+        }
+        // radius -= radius/10f
+        paint.style = Paint.Style.FILL
+        paint.color = Color.parseColor("#00ff00")
+        canvas.drawCircle(wb , hb , radius, paint2)
+        super.onDraw(canvas)
         //paint.color = Color.WHITE
        // canvas.drawPaint(paint)
         // Use Color.parseColor to define HTML colors
+        //supposedly the following formula leads to super good circles
+       // width/2-mBitmap.getWidth()/2, height/2-mBitmap.getHeight()/2
 
 
-        paint.color = Color.parseColor("#ffffff")
-        canvas.drawCircle(b / 2f, a / 2f, radius, paint)
-        super.onDraw(canvas)
 
-        invalidate()
+
     }
 }
 

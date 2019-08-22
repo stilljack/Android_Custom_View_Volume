@@ -9,9 +9,19 @@
     android:background="@color/colorAccent">
 
     <com.example.volumeknob.VolumeKnob
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_margin="10dp"
+        android:id="@+id/vk"
+        />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:layout_margin="10dp"/>
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/im"
+        android:layout_alignBottom="@id/vk"
+        />
 
 </RelativeLayout>
