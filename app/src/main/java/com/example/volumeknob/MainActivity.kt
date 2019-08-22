@@ -6,9 +6,10 @@ import android.os.Bundle
 ///we're gonna make two circles in a customView that will be a superset of Relative Layout
 //use sample code to rotate the indicator around the plate
 
+//.1. going to try to create the CustomView VolumeKnob as a superset of RelativeLayout consisting of 2 drawn circles
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var customDrawable: CustomDrawable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        customDrawable = CustomDrawable(this)
+        setContentView(customDrawable)
 
 
 
