@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="centercicle">#000000</color>
+    <color name="lvloknob">#1A1A1A</color>
+    <color name="lvl1knob">#99C9C9C9</color>
+    <color name="lvl2knob">#D1D1D1</color>
+
+
+
 </resources>
