@@ -1,10 +1,9 @@
-package com.example.volumeknob
+package com.example.volumeknob.activities
 
-import android.graphics.Canvas
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.volumeknob.R
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.Collections.rotate
 
 ///we're gonna make two circles in a customView that will be a superset of Relative Layout
 //use sample code to rotate the indicator around the plate
@@ -13,6 +12,10 @@ import java.util.Collections.rotate
 
 //.2. oh wow how the time has flown. We have one circle succesfully displaying and a better idea of how to use canvas and drawing to it, w
 //relativeLAyout was replaced with view while we debuged. work continues
+
+//.3. installed some code from https://www.techotopia.com/index.php/Android_Touch_and_Multi-touch_Event_Handling to help understand the data
+// from ontouchlistener, going to alter the code to hopefully make real time+luid adjustment possible -- also adjust initial display so
+//knob spawns aproximately in the middle
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 
 btn.setOnClickListener {
-    vk.rotation += 20f
+    vk.rotation += 180f
 
 }
 
